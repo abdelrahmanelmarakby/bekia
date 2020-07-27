@@ -1,7 +1,8 @@
-import 'package:bekia/screens/Splash.dart';
 import 'package:flutter/material.dart';
 import 'package:intro_screen_onboarding_flutter/intro_app.dart';
 import 'package:intro_screen_onboarding_flutter/introduction.dart';
+
+import 'Home.dart';
 
 class Intro extends StatefulWidget {
   @override
@@ -11,19 +12,20 @@ class Intro extends StatefulWidget {
 class _IntroState extends State<Intro> {
   final List<Introduction> list = [
     Introduction(
-      title: 'اهلا بك في بيكيا',
-      subTitle: 'Browse the menu and order directly from the application',
+      title: 'مرحبا',
+      subTitle: 'بيكيا يساعدك في التخلص من مهملاتك بطريقة صديقة للبيئة',
       imageUrl: 'assets/images/intro1.jpg',
     ),
     Introduction(
-      title: 'Delivery',
-      subTitle: 'Your order will be immediately collected and',
-      imageUrl: 'assets/images/intro4.jpg',
+      title: 'المتطلبات',
+      subTitle: 'رقم هاتفك واسمك وموقعك و يعاد تدوير مهملاتك بطريقة نظيفة ',
+      imageUrl: 'assets/images/intro2.png',
     ),
     Introduction(
-      title: 'Delivery',
-      subTitle: 'Your order will be immediately collected and',
-      imageUrl: 'assets/images/intro4.jpg',
+      title: 'التوصيل',
+      subTitle:
+          'حدد كمية و نوع المهملات و سوف نكون امامك لاعادة تدويرها و جعل  المجتمع انظف و افضل ',
+      imageUrl: 'assets/images/intro3.png',
     ),
   ];
 
@@ -33,7 +35,7 @@ class _IntroState extends State<Intro> {
       introductionList: list,
       onTapSkipButton: () {
         Navigator.of(context)
-            .pushReplacement(MaterialPageRoute(builder: (context) => Splash()));
+            .pushReplacement(MaterialPageRoute(builder: (context) => Home()));
       },
     );
   }
